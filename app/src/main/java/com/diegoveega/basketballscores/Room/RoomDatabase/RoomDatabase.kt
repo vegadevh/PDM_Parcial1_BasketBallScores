@@ -1,4 +1,4 @@
-package com.diegoveega.basketballscores.Room
+package com.diegoveega.basketballscores.Room.RoomDatabase
 
 import android.content.Context
 import android.nfc.Tag

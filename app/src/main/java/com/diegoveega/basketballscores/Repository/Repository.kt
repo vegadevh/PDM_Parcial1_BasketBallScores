@@ -10,8 +10,8 @@ class Repository(private val PartidoDAO:PartidoDAO) {
     val allPartidos: LiveData<List<Partido>> = PartidoDAO.getAllPartido()
 
     @WorkerThread
-    suspend fun getOnePartdo(name : String){
-        PartidoDAO.getOneBook(name)
+    suspend fun getOnePartdo(id : Int){
+        PartidoDAO.getOneBook(id)
     }
 
     @WorkerThread
