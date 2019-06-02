@@ -6,7 +6,7 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 @Entity(
-    tableName = "Partido",
+    tableName = "Partido"/*,
     foreignKeys =
     arrayOf(
         ForeignKey(
@@ -17,7 +17,7 @@ import androidx.room.PrimaryKey
             childColumns = arrayOf("EquipoNameB"),
             onDelete = ForeignKey.CASCADE
         )
-    )
+    )*/
 )
 class Partido(
     @ColumnInfo(name = "EquipoA")
