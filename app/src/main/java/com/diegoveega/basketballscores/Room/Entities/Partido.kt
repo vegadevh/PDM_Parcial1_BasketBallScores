@@ -12,7 +12,6 @@ class Partido(
     var Id_Partido: Int = 0
 
     /*
-
     //Se ingresan datos EquipoA
     @ColumnInfo(name = "EquipoA")
     val EquipoNameA: String,
@@ -27,9 +26,3 @@ class Partido(
     val PuntosEquipoB: Int
     */
 )
-/*
-{
-    @PrimaryKey(autoGenerate = true)
-    var Id_Partido: Int = 0
-
-}*/

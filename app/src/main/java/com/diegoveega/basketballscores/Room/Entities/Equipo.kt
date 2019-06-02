@@ -11,7 +11,7 @@ import androidx.room.PrimaryKey
         ForeignKey(
             entity = Partido::class,
             parentColumns = arrayOf("Id_Partido"),
-            childColumns = arrayOf("IdPartido"),
+            childColumns = arrayOf("Id_Partido"),
             onDelete = ForeignKey.CASCADE
         )
     )

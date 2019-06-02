@@ -31,6 +31,5 @@ class Repository(private val PartidoDAO:PartidoDAO,private val EquipoDAO: Equipo
     @WorkerThread
     suspend fun insert(equipo: Equipo){
         EquipoDAO.insert(equipo)
-
     }
 }

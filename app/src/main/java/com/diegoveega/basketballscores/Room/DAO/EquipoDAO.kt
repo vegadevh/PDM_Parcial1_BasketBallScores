@@ -1,11 +1,13 @@
 package com.diegoveega.basketballscores.Room.DAO
 
 import androidx.lifecycle.LiveData
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.diegoveega.basketballscores.Room.Entities.Equipo
 import com.diegoveega.basketballscores.Room.Entities.Partido
 
+@Dao
 interface EquipoDAO {
 
     @Query("SELECT * FROM Equipo where Id_Equipo =:id")
