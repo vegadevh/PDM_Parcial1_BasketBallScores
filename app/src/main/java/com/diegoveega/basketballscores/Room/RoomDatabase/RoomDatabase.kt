@@ -5,20 +5,23 @@ import android.nfc.Tag
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.diegoveega.basketballscores.Room.DAO.EquipoDAO
 import com.diegoveega.basketballscores.Room.DAO.PartidoDAO
+import com.diegoveega.basketballscores.Room.Entities.Equipo
 import com.diegoveega.basketballscores.Room.Entities.Partido
 import kotlinx.coroutines.CoroutineScope
 
-@Database(entities = arrayOf(Tag::class, Partido::class), version = 1)
-public abstract class PartidoRoomDatabase : RoomDatabase() {
+@Database(entities = arrayOf(Equipo::class, Partido::class), version = 2)
+public abstract class EquipoRoomDatabase : RoomDatabase() {
 
     abstract fun partidoDao() : PartidoDAO
+    abstract fun equipoDao() : EquipoDAO
 
     companion object {
         @Volatile
-        private var INSTANCE: PartidoRoomDatabase? = null
+        private var INSTANCE: EquipoRoomDatabase? = null
 
-        fun getDatabase(context: Context, scope: CoroutineScope): PartidoRoomDatabase {
+        fun getDatabase(context: Context, scope: CoroutineScope): EquipoRoomDatabase {
             val tempInstance = INSTANCE
             if (tempInstance != null) {
                 return tempInstance
@@ -26,19 +29,13 @@ public abstract class PartidoRoomDatabase : RoomDatabase() {
             synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    PartidoRoomDatabase::class.java,
-                    "Partido_database"
+                    EquipoRoomDatabase::class.java,
+                    "Equipo_database"
                 ).fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 return instance
             }
         }
-
-
-
-
     }
-
-
 }

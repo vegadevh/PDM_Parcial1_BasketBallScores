@@ -10,7 +10,7 @@ import com.diegoveega.basketballscores.Room.Entities.Partido
 interface PartidoDAO {
 
     @Query("SELECT * FROM Partido where Id_Partido =:id")
-    suspend fun getOneBook(id: Int) : Partido
+    suspend fun getOnePartido(id: Int) : Partido
 
     @Query("SELECT * FROM Partido order by Id_Partido")
     fun getAllPartido(): LiveData<List<Partido>>
