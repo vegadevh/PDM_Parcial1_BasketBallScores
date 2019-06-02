@@ -20,10 +20,15 @@ import androidx.room.PrimaryKey
     )*/
 )
 class Partido(
+
+    //Se ingresan datos EquipoA
     @ColumnInfo(name = "EquipoA")
     val EquipoNameA: String,
+
+    //Se ingresan datos EquipoB
     @ColumnInfo(name = "EquipoB")
     val EquipoNameB: String,
+
     @ColumnInfo(name = "PuntosA")
     val PuntosEquipoA: Int,
     @ColumnInfo(name = "PuntosA")
