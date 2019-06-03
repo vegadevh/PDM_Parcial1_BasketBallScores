@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".ListPartidosFragment"
 android:layout_margin="10dp"
-android:orientation="vertical">
+android:orientation="vertical"
+android:background="@color/black">
+
 
     <TextView
+            android:layout_margin="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Partidos Recientes"
             android:gravity="center"
-            android:textColor="#666"
+            android:textColor="#000"
             android:textSize="20sp"
             android:textStyle="bold"
     />
@@ -21,17 +24,17 @@ android:orientation="vertical">
             android:id="@+id/partidosRV"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="450dp"
+            android:layout_weight="1">
 
     </androidx.recyclerview.widget.RecyclerView>
 
-    <Button
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
+            android:layout_margin="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:text="Add"
             android:src="@drawable/ic_add_black_24dp"/>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

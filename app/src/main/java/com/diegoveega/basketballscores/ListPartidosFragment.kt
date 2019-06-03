@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.diegoveega.basketballscores.Adapter.PartidoListAdapter
 import com.diegoveega.basketballscores.Interface.ComuFrag
 import com.diegoveega.basketballscores.ViewModel.DataBaseViewModel
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -67,7 +68,7 @@ class ListPartidosFragment : Fragment() {
         val vista = inflater.inflate(R.layout.fragment_list_partidos,container,false)
         val viewmodel = ViewModelProviders.of(this).get(DataBaseViewModel::class.java)
         val recyclerView = vista.findViewById<RecyclerView>(R.id.partidosRV)
-        val fab = vista.findViewById<Button>(R.id.fab)
+        val fab = vista.findViewById<FloatingActionButton>(R.id.fab)
 
         val adapter = context?.let { PartidoListAdapter(it) }
         recyclerView.adapter = adapter

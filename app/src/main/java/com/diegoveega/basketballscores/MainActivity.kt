@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity(),ListPartidosFragment.OnFragmentInteract
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         if(findViewById<FrameLayout>(R.id.ContenedorFragments) != null){
             if(savedInstanceState != null){
             }

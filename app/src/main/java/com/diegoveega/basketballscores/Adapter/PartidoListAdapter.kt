@@ -29,6 +29,9 @@ class PartidoListAdapter internal constructor(
 
     inner class PartidoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val partidoItemView: TextView = itemView.findViewById(R.id.textView)
+        val partidoItemView2: TextView = itemView.findViewById(R.id.textView2)
+        val partidoItemView3: TextView = itemView.findViewById(R.id.textView3)
+        val partidoItemView4: TextView = itemView.findViewById(R.id.textView4)
         //Recyclerviewitem
 
     }
@@ -43,7 +46,9 @@ class PartidoListAdapter internal constructor(
     override fun onBindViewHolder(holder: PartidoViewHolder, position: Int) {
         val current = partidos[position]
         holder.partidoItemView.text = current.EquipoNameA
-        holder.partidoItemView.text = current.EquipoNameB
+        holder.partidoItemView2.text = current.EquipoNameB
+        holder.partidoItemView3.text = current.PuntosEquipoA.toString()
+        holder.partidoItemView4.text = current.PuntosEquipoB.toString()
     }
 
     internal fun setPartidos(partidos: List<Partido>) {

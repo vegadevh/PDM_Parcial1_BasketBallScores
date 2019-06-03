@@ -56,10 +56,10 @@ class DetailPartidoFragment : Fragment() {
 
         if(bundle != null){
 
-            val equipoA = bundle.getString("EquipoNameA")
-            val equipoB = bundle.getString("EquipoNameB")
-            val puntosEquipoA = bundle.getInt("PuntosEquipoA")
-            val puntosEquipoB = bundle.getInt("PuntosEquipoB")
+            val equipoA = bundle.getString("EquipoA")
+            val equipoB = bundle.getString("EquipoB")
+            val puntosEquipoA = bundle.getInt("PuntosA")
+            val puntosEquipoB = bundle.getInt("PuntosB")
 
             EquipoNameA.text = equipoA
             PuntosEquipoA.text = puntosEquipoA.toString()
