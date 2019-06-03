@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.diegoveega.basketballscores.R
-import com.diegoveega.basketballscores.Room.Entities.Equipo
+//import com.diegoveega.basketballscores.Room.Entities.Equipo
 import com.diegoveega.basketballscores.Room.Entities.Partido
 
 class PartidoListAdapter internal constructor(
@@ -16,7 +16,7 @@ class PartidoListAdapter internal constructor(
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private var partidos = emptyList<Partido>()
-    private var equipos= emptyList<Equipo>()
+    //private var equipos= emptyList<Equipo>()
 
     inner class PartidoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val partidoItemView: TextView = itemView.findViewById(R.id.textView)

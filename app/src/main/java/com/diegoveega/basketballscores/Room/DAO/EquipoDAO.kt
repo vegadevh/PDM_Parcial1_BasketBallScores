@@ -4,9 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.diegoveega.basketballscores.Room.Entities.Equipo
+//import com.diegoveega.basketballscores.Room.Entities.Equipo
 import com.diegoveega.basketballscores.Room.Entities.Partido
 
+/*
 @Dao
 interface EquipoDAO {
 
@@ -22,3 +23,4 @@ interface EquipoDAO {
     @Query("DELETE FROM Equipo")
     fun deleteAllEquipo()
 }
+        */

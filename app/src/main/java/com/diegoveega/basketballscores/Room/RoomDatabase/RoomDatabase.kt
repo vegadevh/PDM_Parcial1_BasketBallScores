@@ -5,23 +5,23 @@ import android.nfc.Tag
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.diegoveega.basketballscores.Room.DAO.EquipoDAO
+//import com.diegoveega.basketballscores.Room.DAO.EquipoDAO
 import com.diegoveega.basketballscores.Room.DAO.PartidoDAO
-import com.diegoveega.basketballscores.Room.Entities.Equipo
+//import com.diegoveega.basketballscores.Room.Entities.Equipo
 import com.diegoveega.basketballscores.Room.Entities.Partido
 import kotlinx.coroutines.CoroutineScope
 
-@Database(entities = arrayOf(Equipo::class, Partido::class), version = 3)
-public abstract class EquipoRoomDatabase : RoomDatabase() {
+@Database(entities = arrayOf(Partido::class), version = 4)
+public abstract class PartidoRoomDatabase : RoomDatabase() {
 
     abstract fun partidoDao() : PartidoDAO
-    abstract fun equipoDao() : EquipoDAO
+    //abstract fun equipoDao() : EquipoDAO
 
     companion object {
         @Volatile
-        private var INSTANCE: EquipoRoomDatabase? = null
+        private var INSTANCE: PartidoRoomDatabase? = null
 
-        fun getDatabase(context: Context, scope: CoroutineScope): EquipoRoomDatabase {
+        fun getDatabase(context: Context, scope: CoroutineScope): PartidoRoomDatabase {
             val tempInstance = INSTANCE
             if (tempInstance != null) {
                 return tempInstance
@@ -29,7 +29,7 @@ public abstract class EquipoRoomDatabase : RoomDatabase() {
             synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    EquipoRoomDatabase::class.java,
+                    PartidoRoomDatabase::class.java,
                     "Equipo_database"
                 ).fallbackToDestructiveMigration()
                     .build()

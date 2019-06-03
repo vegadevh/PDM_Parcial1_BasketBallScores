@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
-
+/*
 @Entity(tableName = "Equipo",
     foreignKeys =
     arrayOf(
@@ -29,3 +29,5 @@ class Equipo(
     @PrimaryKey(autoGenerate = true)
     var Id_Equipo: Int = 0
 }
+
+*/

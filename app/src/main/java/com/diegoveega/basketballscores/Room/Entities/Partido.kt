@@ -8,10 +8,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "Partido")
 class Partido(
 
-    @PrimaryKey(autoGenerate = true)
-    var Id_Partido: Int = 0
-
-    /*
     //Se ingresan datos EquipoA
     @ColumnInfo(name = "EquipoA")
     val EquipoNameA: String,
@@ -22,7 +18,10 @@ class Partido(
 
     @ColumnInfo(name = "PuntosA")
     val PuntosEquipoA: Int,
-    @ColumnInfo(name = "PuntosA")
+    @ColumnInfo(name = "PuntosB")
     val PuntosEquipoB: Int
-    */
-)
+
+){
+    @PrimaryKey(autoGenerate = true)
+    var Id_Partido: Int = 0
+}
