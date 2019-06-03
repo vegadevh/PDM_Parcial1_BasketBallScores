@@ -12,7 +12,15 @@ import com.diegoveega.basketballscores.Room.Entities.Partido
 
 class PartidoListAdapter internal constructor(
     context: Context
-) : RecyclerView.Adapter<PartidoListAdapter.PartidoViewHolder>() {
+) : RecyclerView.Adapter<PartidoListAdapter.PartidoViewHolder>(), View.OnClickListener {
+    override fun onClick(v: View?) {
+        if(listener !=null){
+            listener?.onClick(v)
+        }
+        if(listenerBoton != null){
+            listenerBoton?.onClick(v)
+        }
+    }
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private var partidos = emptyList<Partido>()
@@ -21,7 +29,7 @@ class PartidoListAdapter internal constructor(
 
     inner class PartidoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val partidoItemView: TextView = itemView.findViewById(R.id.textView)
-//Recyclerviewitem
+        //Recyclerviewitem
 
     }
 
@@ -36,7 +44,6 @@ class PartidoListAdapter internal constructor(
         val current = partidos[position]
         holder.partidoItemView.text = current.EquipoNameA
         holder.partidoItemView.text = current.EquipoNameB
-        holder.partidoItemView.text = current.Id_Partido.toString()
     }
 
     internal fun setPartidos(partidos: List<Partido>) {
@@ -48,6 +55,11 @@ class PartidoListAdapter internal constructor(
 
     fun setOnClickListener(listener: View.OnClickListener){
         this.listener = listener
+
+    }
+
+    fun setOnClickListenerBoton(listener : View.OnClickListener){
+        this.listenerBoton = listener
 
     }
 }

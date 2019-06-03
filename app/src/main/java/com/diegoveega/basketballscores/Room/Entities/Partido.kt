@@ -19,7 +19,9 @@ class Partido(
     @ColumnInfo(name = "PuntosA")
     val PuntosEquipoA: Int,
     @ColumnInfo(name = "PuntosB")
-    val PuntosEquipoB: Int
+    val PuntosEquipoB: Int,
+    @ColumnInfo(name = "Fav")
+    val Fav: Boolean
 
 ){
     @PrimaryKey(autoGenerate = true)

@@ -11,7 +11,7 @@ import com.diegoveega.basketballscores.Room.DAO.PartidoDAO
 import com.diegoveega.basketballscores.Room.Entities.Partido
 import kotlinx.coroutines.CoroutineScope
 
-@Database(entities = arrayOf(Partido::class), version = 4)
+@Database(entities = arrayOf(Partido::class), version = 5)
 public abstract class PartidoRoomDatabase : RoomDatabase() {
 
     abstract fun partidoDao() : PartidoDAO

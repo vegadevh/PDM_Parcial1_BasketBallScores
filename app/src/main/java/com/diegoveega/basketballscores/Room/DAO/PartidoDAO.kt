@@ -15,6 +15,9 @@ interface PartidoDAO {
     @Query("SELECT * FROM Partido order by Id_Partido")
     fun getAllPartido(): LiveData<List<Partido>>
 
+    @Query("UPDATE Partido SET Fav = NOT Fav where Id_Partido = :id")
+    suspend fun updatePartido(id : Int)
+
     @Insert
     suspend fun insert(partido : Partido)
 
