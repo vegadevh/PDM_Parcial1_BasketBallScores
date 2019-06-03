@@ -22,6 +22,7 @@
                 android:orientation="vertical">
 
             <EditText
+                    android:id="@+id/EquipoA_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -38,27 +39,24 @@
 
 
             <Button
-                    android:id="@+id/bt_team_a_3_p"
+                    android:id="@+id/bt_team_a_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_small"
-                    android:onClick="addThreeTeamA"
-                    android:text="+3 PUNTO" />
+                    android:text="+3 PUNTO"/>
 
             <Button
-                    android:id="@+id/bt_team_a_2_p"
+                    android:id="@+id/bt_team_a_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_small"
-                    android:onClick="addTwoTeamA"
                     android:text="+2 PUNTO" />
 
             <Button
-                    android:id="@+id/bt_team_a_free_throw"
+                    android:id="@+id/bt_team_a_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_small"
-                    android:onClick="addOneTeamA"
                     android:text="+1 PUNTO" />
 
         </LinearLayout>
@@ -80,6 +78,7 @@
                 android:orientation="vertical">
 
             <EditText
+                    android:id="@+id/EquipoB_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -95,27 +94,24 @@
                     android:textSize="@dimen/big_text" />
 
             <Button
-                    android:id="@+id/bt_team_b_3_p"
+                    android:id="@+id/bt_team_b_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_small"
-                    android:onClick="addThreeTeamB"
                     android:text="+3 PUNTO" />
 
             <Button
-                    android:id="@+id/bt_team_b_2_p"
+                    android:id="@+id/bt_team_b_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_small"
-                    android:onClick="addTwoTeamB"
                     android:text="+2 PUNTO" />
 
             <Button
-                    android:id="@+id/bt_team_b_free_throw"
+                    android:id="@+id/bt_team_b_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_small"
-                    android:onClick="addOneTeamB"
                     android:text="+1 PUNTO" />
 
         </LinearLayout>
@@ -123,13 +119,12 @@
     </LinearLayout>
 
     <Button
-            android:id="@+id/bt_reset"
+            android:id="@+id/btn_Fin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginBottom="@dimen/margin_medium"
-            android:onClick="resetScores"
             android:padding="@dimen/margin_medium"
             android:text="Fin del partido"/>
 
