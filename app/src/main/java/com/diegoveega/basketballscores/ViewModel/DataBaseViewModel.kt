@@ -34,6 +34,10 @@ class DataBaseViewModel(application: Application) : AndroidViewModel(application
         repository.insert(partido)
 
     }
+    fun updatePartido(id: Int) = viewModelScope.launch ( Dispatchers.IO ){
+        repository.updatePartido(id)
+
+    }
     /*
     fun insertEquipo(equipo: Equipo) = viewModelScope.launch(Dispatchers.IO) {
         repository.insert(equipo)

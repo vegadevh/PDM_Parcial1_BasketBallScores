@@ -73,6 +73,17 @@ class ListPartidosFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(context)
 
+        viewmodel.allPartidos.observe(this, Observer { books ->
+            books?.let { adapter?.setOnClickListenerBoton(object : View.OnClickListener{
+                override fun onClick(v: View) {
+                    val id : String = v.tag.toString()
+                    viewmodel.updatePartido(id.toInt())
+                }
+
+
+            }) }
+        })
+
         viewmodel.allPartidos.observe(this, Observer{partidos ->
             partidos?.let{adapter?.setOnClickListener(object :View.OnClickListener{
                 override fun onClick(v: View?) {
@@ -114,7 +125,7 @@ class ListPartidosFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is Activity) {
-            this.actividad = context as Activity
+            this.actividad = context
             Comu = this.actividad as ComuFrag
         }
         if (context is OnFragmentInteractionListener) {

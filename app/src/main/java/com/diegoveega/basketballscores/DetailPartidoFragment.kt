@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import java.util.zip.Inflater
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -41,8 +43,33 @@ class DetailPartidoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        val vista :View = inflater.inflate(R.layout.fragment_detail_partido,container,false)
+
+
+        val EquipoNameA = vista.findViewById<TextView>(R.id.tv_EquipoA)
+        val EquipoNameB = vista.findViewById<TextView>(R.id.tv_EquipoB)
+        val PuntosEquipoA = vista.findViewById<TextView>(R.id.tv_PuntosA)
+        val PuntosEquipoB = vista.findViewById<TextView>(R.id.tv_PuntosB)
+
+        val bundle: Bundle?=arguments
+
+        if(bundle != null){
+
+            val equipoA = bundle.getString("EquipoNameA")
+            val equipoB = bundle.getString("EquipoNameB")
+            val puntosEquipoA = bundle.getInt("PuntosEquipoA")
+            val puntosEquipoB = bundle.getInt("PuntosEquipoB")
+
+            EquipoNameA.text = equipoA
+            PuntosEquipoA.text = puntosEquipoA.toString()
+            EquipoNameB.text = equipoB
+            PuntosEquipoB.text= puntosEquipoB.toString()
+        }
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail_partido, container, false)
+        return vista
     }
 
     // TODO: Rename method, update argument and hook method into UI event

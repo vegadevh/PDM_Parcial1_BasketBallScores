@@ -22,6 +22,10 @@ class Repository(private val PartidoDAO:PartidoDAO/*, private val EquipoDAO: Equ
         PartidoDAO.insert(partido)
 
     }
+    @WorkerThread
+    suspend fun updatePartido(id : Int){
+        PartidoDAO.updatePartido(id)
+    }
 /*
     @WorkerThread
     suspend fun getOneEquipo(id: Int){

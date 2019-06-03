@@ -50,7 +50,7 @@ class BKBActivity : AppCompatActivity() {
                 val PuntosEquipoA = EquipoAScore.text.toString()
                 val PuntosEquipoB = EquipoBScore.text.toString()
 
-                viewmodel.insertPartido(Partido(EquipoNameA, EquipoNameB, PuntosEquipoA.toInt(), PuntosEquipoB.toInt()))
+                viewmodel.insertPartido(Partido(EquipoNameA, EquipoNameB, PuntosEquipoA.toInt(), PuntosEquipoB.toInt(),Fav = false))
 
                 Toast.makeText(this, "Se creo el libro correctamente", Toast.LENGTH_SHORT).show()
 
